@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //NaN : not a number 
+        var val_1 = '10'; //문자열
+        var val_2 = 5; //정수형
+
+        //호이스팅이 되냐 안되냐 여튼 이거는 나중에 계속 
+        // let 변수
+        // const 상수
+        // ES6문법
+
+        //문자열과 숫자의 덧셈
+        console.log(val_1 + val_2);
+        //문자열 + 문자열로 처리된다.
+
+        //형변환
+        console.log(parseInt(val_1) + val_2);
+        console.log(Number(val_1) + val_2);
+        
+        console.log('--------------------------');
+
+        //더하기를 제외한 나머지는 연산처리가가능하다.
+        console.log(val_1 * val_2);
+        console.log(val_1 - val_2);
+        console.log(val_1 / val_2);
+        console.log(val_1 % val_2);
+
+
+
+        console.log('--------------------------');
+
+
+        var val_3 = '10a'; //문자열
+        var val_4 = 5; //정수형
+
+        console.log(val_3 * val_4);//NaN
+        console.log(val_3 - val_4);
+        console.log(val_3 / val_4);
+        console.log(val_3 % val_4);
+
+        console.log('--------------------------');
+        var val_5 = 7;
+        var val_6 = 9; 
+
+        console.log(val_5 + val_6);
+        console.log(''+val_5 + val_6);
+        console.log(String(val_5) + val_6);
+
+        console.log('--------------------------');
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

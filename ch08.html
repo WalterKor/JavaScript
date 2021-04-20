@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <script>
+        /*지금하는거 개중요하다.*/
+        /*자바에서는 함수를 매개변수 파라미터로 보낼수 없다.
+        하지만 자바스크립트에선 가능하다.*/
+
+
+        function calc(cal, n1 ,n2) { // 스택에 저장된다. calc에 주소값이 저장된다ㅣ.
+            return cal(n1 , n2)
+        }
+
+        function sum(num1, num2) { //스택에 저장된다.
+            return num1 + num2;
+        }
+
+        function minus(num1, num2) {
+            return num1 - num2;     
+        }
+
+        
+        console.log('result = %d', calc(sum,10,20));
+        console.log('result = %d', calc(minus,40,20));
+        
+        console.log('------------------------------');
+        var methodSum = sum;
+
+        console.log('result = %d',methodSum(1, 2));
+        methodSum = minus;
+        console.log('result = %d',methodSum(10, 2));
+
+        console.log('------------------------------');
+
+        function multi(a ,b) { //이거 메소드 정의만 해놓은거다. 리턴값이 없으므로
+            console.log('a * b = '+a*b);
+        }
+
+        function multi(a ,b) { 
+               return a*b;
+        }
+
+
+        var result = calc(multi,2,3)
+
+        console.log(result);
+
+
+
+
+    </script>    
+</body>
+</html>

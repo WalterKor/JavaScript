@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var arr = { //내부적으로 이렇게 만들어지는걸 보여주기 위해서 예시이다.
+                0 : 10,
+                1 : 20,
+                2 : 30,
+                3 : 40,
+                length : 4, //length가 꼭 있어줘야한다. 
+                forEach : function (f) {
+                    for(var i=0; i<this.length; i++){
+                        f(this[i]);
+                    }
+                }
+            }
+
+            function print(item) {
+                console.log('item : '+ item);
+            }
+
+            arr.forEach(print);
+
+
+
+            console.log(arr[0]);
+
+            let number = [1, 2, 3, 4, 5];
+
+            number.forEach( x => {
+                console.log(x*2);
+            })
+
+            
+
+
+    </script>
+
+</body>
+</html>

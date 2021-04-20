@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        var result = 10 && 15;//ture && true인데 더 큰값을
+        console.log(result); //12값이 들어간다. 
+        
+        result = 12 || 10; //뒤에 생각도 하지 않고 12출력
+        console.log(result); //12이 출력된다.
+        //and결과값과 or결과값을 넣었지만 결국 숫자가 반환된다.
+    
+        result = 1 && 12 || 0;
+        console.log(result);
+
+        result = 1|| 12 || 0;
+        console.log(result);
+
+        var a = '';
+        var b = 'hi';
+
+        console.log(a||b);
+    </script>
+</body>
+</html>

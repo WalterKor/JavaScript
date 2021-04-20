@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*오버로딩이 안된다.*/
+        function sum(n1, n2) {
+            return n1 + n2;
+        }
+
+        function sum2(n1 , n2) {
+            console.log('sum2 : %d',n1+n2);
+        }
+
+        var result = sum(10, 20);
+        console.log('result = %d',result);
+
+        sum2(11,22);
+        result = sum2(11,22) //반환타입이 없으면
+        console.log(result); //받았을때 undefined
+        
+        var ddd;
+        if(ddd = sum(10,20)){
+            console.log(ddd);
+        }
+        if(ddd = sum(0,0)){ //찍히지 않는다. 0은 false이니깐
+            console.log(ddd);
+        }
+
+        console.log('--------------------------------------------');
+    </script>
+</body>
+</html>
