@@ -1,0 +1,40 @@
+<script>
+    /*
+    //함수를 선언한다.
+    function callThreeTimes(callback) { //3번호출하는 함수
+        for(let i=0; i<3; i++){
+            callback(i)
+        }
+    }
+
+    function print(i) {
+        console.log(`${i}번째 함수 호출`)
+    }
+    
+    callThreeTimes(print2)
+    */
+    /*
+    function print2(i) {
+        console.log(`${i}번째 함수 호출 하하하하하ㅏㅎ`);
+    }
+    */
+
+
+</script>
+
+
+<script>
+      function callThreeTimes(callback) { //3번호출하는 함수
+        for(let i=0; i<3; i++){
+            callback(i)
+        }
+    }
+
+    function print(i) {
+        console.log(`${i}번째 함수 호출`)
+    }
+    callThreeTimes(function print(i) {
+        console.log(`${i}번째 함수 호출`)
+    })
+
+</script>

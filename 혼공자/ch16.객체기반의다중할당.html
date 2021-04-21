@@ -1,0 +1,24 @@
+<script>
+    //객체 기반의 다중 할당
+    /*
+        {속성이름, 속성이름} = 객체
+        {식별자 = 속성이름, 식별자 = 속성이름} = 객체        
+    */
+
+    //객체 속성 꺼내서 다중 할당하기
+    const Object = {
+        name : '혼자공부하는 파이썬',
+        price : 18000,
+        publisher : '한빛미디어'
+    }
+
+    const{name, price} = Object
+    console.log('속성 이름을 그대로 꺼내서 출력합니다.');
+    console.log(name, price);
+
+    console.log('-------------------------------------');
+    const{name = '찬호', price = 18000000} = Object
+    console.log(' 다른이름으로 출력합니다.');
+    console.log(name, price);
+
+</script>
