@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        window.a = 10; //변수 선언을 하지 않고도 변수에 값을 줄 수 있다. 
+                //이렇게 될 경우 전역변수에다 넣게되는거다.
+                //되도록이면 var를 붙히도록 하자!
+        console.log(`a : ` + window.a);
+
+        var b;
+        console.log(`b : ` + b); //undefined
+
+        
+        console.log(`d : `+ d);
+        var d;
+
+        console.log(`c : `+ c); //Uncaught ReferenceError: c is not defined
+
+        //hoisting : 문서를 전체 읽고 var를 맨위로 올리는 현상, 생각보다 문제가 많다.
+        // var, function만 hoisting이 가능하다. 
+        // {}만나기 전까지 올라간다!
+        //값까지 같이 올라가지 않는다선언문만 올라간다. 
+    </script>
+</body>
+</html>

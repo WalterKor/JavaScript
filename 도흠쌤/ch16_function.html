@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        NaN = not a Number 
+        function sum(n1) {
+            if(n1 == undefined){
+                n1 == 10;
+            }
+            console.log(n1);
+        }
+        */
+
+        function sum(n1 = 10, n2) { //undefined이면 10을 쓰겠다. 아니면 123을 쓰겠다.
+            console.log(n1);
+            console.log(n2);
+        }
+        sum(123);
+        sum(20, 30)
+        //sum(11,20) //첫번째 매개변수 즉 순차적으로 넣어준다. 
+        //30은 생깐다. 
+        console.log('--------------------------------------------------------');
+
+
+        function sumAll() {
+            var val = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                val += arguments[i]
+            }
+            console.log(val);
+        }
+
+
+        function sumAll2(...args) { //...ars 가변인자.
+
+            var val = 0;
+            for (var i = 0; i < args.length; i++) {
+                val += args[i]
+            }
+            console.log(val);
+        }
+
+        sumAll(1);
+        sumAll(1, 5);
+        sumAll(1, 5, 7);
+        sumAll(1, 5, 7, 9);
+        sumAll(1, 5, 7, 9, 10);
+
+        console.log("--------------------------------------------------------");
+        sumAll2(1);
+        sumAll2(1, 5);
+        sumAll2(1, 5, 7);
+        sumAll2(1, 5, 7, 9);
+        sumAll2(1, 5, 7, 9, 10);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<script>
+    function foo() {
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                console.log(('foo ok'));
+                resolve()
+            },3000)
+        })
+    }
+
+    function bar() {
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                console.log('bar Ok');
+                resolve()
+            },2000)
+        })
+    }
+
+    function baz() {
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                console.log('bazzzzzzzzzzz Ok');
+                resolve()
+            },1000)
+        })
+    }
+
+    //await, asysc
+
+    async function run() {
+
+        await foo();//await 를 꼭 써줘야한다!!
+        await bar();
+        await baz();
+        
+    }
+    run();
+</script>

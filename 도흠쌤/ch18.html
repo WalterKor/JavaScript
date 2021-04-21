@@ -1,0 +1,54 @@
+<script>
+
+    //var prom = new Promise(fn);
+    var pro1 = new Promise(function (reslove, reject) {
+
+        setTimeout(function () {
+            reslove(200) //실제로 리턴값을 보낼 수 있다. 무조건 호출은 해줘야한다. 
+        }, 2000)
+    })
+
+    pro1.then(function (res) {//reslove는 then이랑 연관되어있다. 
+        console.log(`pro1 : ` + res);
+    }).catch(function (err) {
+        console.log(`err : `+ err);
+    })
+
+</script>
+
+<script>
+
+    //기업에서 가장 많이 물어보는게 Ajax통신
+    //자바스크립트에서 오래걸리는건  Promise로 감싼다! 통신은 무조건!
+    /*
+    var fn = function (resolve, reject) {
+
+        //오래걸리는 작업!!
+        if(작업이 잘 완료됐다면{
+            reslove(); //함수호출
+        })else{
+            reject(); //함수 호출
+        }
+    }
+
+   
+    var prom = new Promise(fn);
+    */
+</script>
+
+<script>
+
+    var hello = function () {
+        console.log(`hello`);
+    }
+
+    setTimeout(hello, 1000); //한번만 호출한다.
+    // setTimeout(함수, 시간값);//한번만 호출한다.
+
+    setTimeout(function () {
+        console.log(`hello`);
+    }, 1000);
+
+    hello();
+
+</script>

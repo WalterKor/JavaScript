@@ -1,0 +1,48 @@
+<script>
+    var arr = [10, 20, 30, 40, 50, 60]
+    var arr2 = { 
+        0 : 10,
+        1 : 20,
+        2 : 30,
+        3 : 40,
+        4 : 50,
+        5 : 60,
+        length : 6,
+
+        map : function (callback) {
+            var temp = [];
+            for(var i=0; i<this.length; i++){
+                var val = callback(this[i]);
+            
+                console.log(`val : ` + val);
+                tmep.push(val)
+            }
+            return temp;
+        }
+        
+    }
+    
+    var result = arr.map(function (value) {
+        return value * 2;
+    })
+    function x(value) {
+        return value * 2;
+    }
+    function z(value) {
+        return value - 2;
+    }
+
+    
+    var result2 = arr2.map(x)
+    var result3 = arr2.map(z)
+
+
+
+    console.log(`result : ` + result);
+    console.log(`result2 : ` + result2);
+    
+
+
+
+
+</script>

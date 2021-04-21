@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        /*
         var arr = [10,20,30,40];
 
         var result = arr2.map(function (item) {
@@ -24,6 +25,76 @@
 
         console.log(result);
         console.log(result2); //원본을 건들지 않는걸 비파괴
+
+        */
     </script>
+
+    <script>
+
+        //map() : 리턴값을 가지고 새로운 배열을 만드는 함수이다.
+        var arr1  = [10, 20, 30, 40, 50]
+
+        // arr1.map()
+        // console.log(`${arr1}`);
+
+        console.log('***************************************************');
+
+        arr1.map(function name(value) {
+            return value
+        })
+        console.log(`${arr1}`);
+
+
+        console.log('***************************************************');
+
+
+        arr1 = arr1.map(function (value) {
+            return value * value; 
+        })
+
+        console.log(`${arr1}`); //이런식으로 출력하면 배열이 출력이된다. 
+    
+        console.log('***************************************************');
+        //35이하 값은 -5
+        //35초과 값은 +5
+
+        var AAA = [10, 20, 30, 40, 50, 60]
+        
+        AAA = AAA.map(function (value) {
+            
+            if(value > 35){
+                return (value + 5) 
+            }
+            return (value - 5) 
+        })
+
+        console.log(`AAA의 배열 : ${AAA}`);
+
+
+
+        
+    </script>
+
+    <script>
+
+        //이거 내가 개인적으로 연습한거니깐 훈수 노노해
+
+        let 익명함수
+
+        //익명함수를 2번 생성합니다.
+
+        익명함수 = function (params) {
+            console.log(`1번째 익명함수입니다.`);
+        }
+
+        익명함수 = function (params) {
+            console.log(`2번째 익명함수입니다.`);
+        }
+
+        //익명함수
+        익명함수(); //가장최신함수를 호출한다.
+
+    </script>
+
 </body>
 </html>

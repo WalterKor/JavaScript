@@ -1,0 +1,61 @@
+<script>
+    //콜백 지옥
+
+    var result;
+
+    setTimeout(() => {
+
+        console.log('1');
+
+        setTimeout(() => {
+            console.log('2');
+
+            setTimeout(() => {
+                console.log('3');
+            }, 100);
+
+        }, 3000);
+
+    }, 5000);
+
+
+    
+</script>
+
+<script>
+    var result1 = 10;//함수가 계속 들어가서 짜증난다 그래서 생긴게 promise
+    
+    setTimeout( function () {
+        console.log('1');
+        setTimeout(function () {
+            console.log('2');
+                setTimeout(function () {
+                    console.log('2');
+                }, 1000);
+        }, 3000);
+    },5000);
+
+</script>
+
+<script>
+
+    var result = 10;
+
+    setTimeout(() => {
+        console.log(`2 : `+result);
+    }, 3000);
+
+    setTimeout(() => {
+        console.log(`3 : `+result);
+    }, 3000);
+
+    setTimeout(() => {
+        console.log(`1 : `+result);
+        result = 2;
+    }, 3000);
+
+    //자바는 동기타입 : 끝나야만 다음것이 실행되는
+    //자바스크립트 비동기 방식 : 안끝나도 순차적으로 실행되는 꼭 결과값이 나와야하는건 아님 
+
+
+</script>

@@ -1,0 +1,16 @@
+<script>
+    function func(callback) {//펑션안에있는 함수를 실행시킨다.
+        console.log(typeof(callback));
+        //넘어온 함수 실행하기
+        callback();
+    }
+
+    function myCall() {
+        console.log('myCall호출된다.');
+    }
+
+    func(myCall);
+
+
+
+</script>

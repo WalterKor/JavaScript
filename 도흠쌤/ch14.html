@@ -1,0 +1,25 @@
+<script>
+
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+    var result = arr.filter(function (value) {//값이 true이면 값을 반환
+        console.log(`value : ` + value);
+
+        if(value % 2 !== 0){
+            return true
+        }
+        return false;//return값이 false이면 리턴하지 않는다. 
+                    //true이면 배열에다 값을 담고 false이면 배열에다 값을 담지 않는다. 
+        //return value % 2; 2로 나눴을때 나머지가 0이면 false를가 나오므로             
+    })
+
+
+
+
+    console.log('arr : ' + arr);
+    console.log('restult : ' + result);
+    console.log('restult.length : ' + result.length);
+
+
+
+
+</script>
