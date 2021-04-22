@@ -9,13 +9,14 @@
         5 : 60,
         length : 6,
 
-        map : function (callback) {
+        map : function (x) {
             var temp = [];
             for(var i=0; i<this.length; i++){
-                var val = callback(this[i]);
+
+                var val = x(this[i]);
             
                 console.log(`val : ` + val);
-                tmep.push(val)
+                temp.push(val)
             }
             return temp;
         }
@@ -33,12 +34,14 @@
     }
 
     
+    var result = arr2.map(x)
     var result2 = arr2.map(x)
     var result3 = arr2.map(z)
 
-
-
+    
     console.log(`result : ` + result);
+
+    
     console.log(`result2 : ` + result2);
     
 
