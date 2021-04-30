@@ -1,0 +1,52 @@
+<script>
+    const array = [100, 20, '문자열', true, function(){}]
+    console.log(array[0]);
+    array[0] = 200;
+    console.log(array[1]);
+
+    const object = {
+        이름 : '구름',
+        나이 : 7,
+        키 : '값',
+        주소 : '값',
+        bark : function () {
+            //객체 내부의 함수
+
+        }
+    }
+
+    //object['이름']
+    console.log(object.나이); 
+    object.이름 = '별';
+    console.log(object.이름);
+    
+    //객체의 키와 값을 정적으로 생성한다!
+    const pet = {
+        name : '구름',
+        age : 8
+    }
+    //객체의 키와 값을 동적으로 생성한다.
+    pet.color = 'brown'
+    
+
+    //객체의 키와 값을 동적으로 제거한다
+    delete pet.color
+    console.log(pet);
+
+
+    const book = {
+        name : '혼자공부하는 파이썬',
+        price : 18000,
+        publisher : '한빛미디어'
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
