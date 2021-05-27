@@ -1,3 +1,16 @@
+'use  strict'
+
+const obj = {
+    title : 'node.js 올인원 패키지'
+}
+
+function isEmptyObj() {    
+    if (obj.title) {
+        return true
+    }else{
+        return false
+    }
+}
 
 
-module.exports.a = "hello a"
+const isEmptyObj =() => {obj.title ? true : false} //삼항연산자
